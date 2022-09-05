@@ -9,7 +9,7 @@ const LeftMenu = ({ showMenu, hideMenu }: Props) => {
 
   return (
     <div
-      className={`z-20 h-screen w-screen bg-gradient-to-t from-green-100 to-white absolute top-12 left-full flex flex-col items-center justify-center gap-10 ${
+      className={`z-20 h-screen w-screen bg-gradient-to-t from-green-100 to-white dark:from-green-900 dark:to-black dark:text-white absolute top-12 left-full flex flex-col items-center justify-center gap-10 ${
         showMenu && '-translate-x-full'
       } duration-500`}
     >
