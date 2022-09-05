@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 
-const Navbar = () => {
+interface Props {
+  toggleMenu: () => void
+}
+
+const Navbar = ({ toggleMenu }: Props) => {
   const [dark, setDark] = useState<boolean>(false)
 
   return (
     <nav className='h-12 flex items-center justify-end gap-1 pr-2 sticky top-0 z-10'>
       <div
-        className='h-9 w-9 rounded-full bg-gray-300/30 flex items-center justify-center'
+        className='h-9 w-9 rounded-full bg-gray-300/30 flex items-center justify-center cursor-pointer'
         onClick={() => setDark(!dark)}
       >
         {dark ? (
@@ -41,7 +45,7 @@ const Navbar = () => {
           </svg>
         )}
       </div>
-      <div className='h-9 w-9 flex items-center justify-center'>
+      <div className='h-9 w-9 flex items-center justify-center cursor-pointer' onClick={toggleMenu}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
