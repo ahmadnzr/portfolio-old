@@ -8,7 +8,11 @@ const App = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
-    <div className='h-screen w-screen text-slate-700 relative overflow-hidden'>
+    <div
+      className={`h-screen w-screen text-slate-700 relative overflow-x-hidden ${
+        showMenu && 'overflow-y-hidden'
+      }`}
+    >
       <Navbar toggleMenu={() => setShowMenu(!showMenu)} />
       <LeftMenu showMenu={showMenu} hideMenu={() => setShowMenu(false)} />
 
