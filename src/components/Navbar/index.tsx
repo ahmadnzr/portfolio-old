@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import { ThemeContext, ThemeMode } from '../../context/ThemeContext'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 
 interface Props{
   toggleMenu: () => void
