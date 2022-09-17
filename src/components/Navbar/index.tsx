@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ThemeContext, ThemeMode } from '../../context/ThemeContext'
 
-interface Props {
+interface Props{
   toggleMenu: () => void
-  darkMode: boolean
-  toggleMode: () => void
 }
 
-const Navbar = ({ toggleMenu, darkMode, toggleMode }: Props) => {
+const Navbar = ({toggleMenu}: Props) => {
+  const {theme, toggleTheme}= useContext(ThemeContext)
+
   return (
     <nav className='dark:bg-black h-12 flex items-center justify-end gap-1 pr-2 sticky top-0 z-10'>
       <div
         className='h-9 w-9 rounded-full bg-gray-300/30 dark:bg-green-900/50 flex items-center justify-center cursor-pointer'
-        onClick={toggleMode}
+        onClick={toggleTheme}
       >
-        {darkMode ? (
+        {theme === 'dark' ? (
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -51,7 +52,7 @@ const Navbar = ({ toggleMenu, darkMode, toggleMode }: Props) => {
           fill='none'
           viewBox='0 0 24 24'
           strokeWidth={1.5}
-          stroke={darkMode ? 'white' : 'green'}
+          stroke={theme === 'dark' ? 'white' : 'green'}
           className='w-6 h-6'
         >
           <path

@@ -1,23 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from './components/Navbar'
 import Photo from './assets/photos/photo.png'
 import Square from './assets/icons/square.png'
 import LeftMenu from './components/LeftMenu'
+import { ThemeContext } from './context/ThemeContext'
 
 const App = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
-  const [darkMode, setDarkMode] = useState<boolean>(false)
+  const {theme} = useContext(ThemeContext)
 
   return (
     <div
-      className={`${darkMode && 'dark'} h-screen w-screen text-slate-700 relative overflow-x-hidden ${
+      className={`${theme} h-screen w-screen text-slate-700 relative overflow-x-hidden ${
         showMenu && 'overflow-y-hidden'
       }`}
     >
       <Navbar
         toggleMenu={() => setShowMenu(!showMenu)}
-        darkMode={darkMode}
-        toggleMode={() => setDarkMode(!darkMode)}
       />
       <LeftMenu showMenu={showMenu} hideMenu={() => setShowMenu(false)} />
 
@@ -32,7 +31,10 @@ const App = () => {
             from <strong>Indonesia</strong>
           </p>
           <div className='flex gap-3 text-sm mt-5'>
-            <a href='#' className='px-2 py-1 bg-green-500/10 text-green-700 dark:text-white rounded-md'>
+            <a
+              href='#'
+              className='px-2 py-1 bg-green-500/10 text-green-700 dark:text-white rounded-md'
+            >
               Download CV
             </a>
             <a
