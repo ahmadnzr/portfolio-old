@@ -29,7 +29,7 @@ const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
         <img className='h-12' src={PhotoCard} alt='' />
         <div className='flex-1 mx-2'>
           <strong className='block text-lg capitalize'>{title}</strong>
-          <span className='capitalize'>{subtitle}</span>
+          <span className='capitalize text-sm'>{subtitle}</span>
         </div>
         <div className='flex flex-col gap-1'>
           <div className='h-1 w-1 rounded-full bg-black'></div>

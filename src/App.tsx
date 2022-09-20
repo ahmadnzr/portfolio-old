@@ -5,20 +5,15 @@ import Square from './assets/icons/square.png'
 import LeftMenu from './components/LeftMenu'
 import { ThemeContext } from './context/ThemeContext'
 import Card from './components/Card'
+import AboutContent from './components/Contents/AboutContent'
+import ProjectContent from './components/Contents/ProjectContent'
+import TechContent from './components/Contents/TechContent'
+import ContactContent from './components/Contents/ContactContent'
+import ThanksContent from './components/Contents/ThanksContent'
 
 const App = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
   const { theme } = useContext(ThemeContext)
-
-  const aboutContent = (
-    <div className='h-full flex flex-col justify-center text-center p-5'>
-      <strong className='mt-2'>BERADAB - BERILMU - BERMANFAAT.</strong>
-      <p className='font-thin'>
-        Belajar dari kesalahan untuk untuk perbaikan dimasa yang akan datang. Itu semua adalah motto
-        saya untuk terus berkembang.
-      </p>
-    </div>
-  )
 
   return (
     <div className={`${theme} h-screen w-screen text-slate-700 overflow-x-hidden`}>
@@ -53,8 +48,20 @@ const App = () => {
           <img src={Square} alt='' className='absolute bg-cover h-20 bottom-44 left-48' />
           <img src={Photo} alt='' className='absolute inset-x-0 bottom-0 bg-cover h-96' />
         </div>
-        <Card title={'About'} subtitle={'Bersponsor'} content={aboutContent} sponsor={true} />
-        <Card title={'About'} subtitle={'Bersponsor'} content={aboutContent} />
+        <Card title={'About'} subtitle={'Lombok, Indonesia'} content={<AboutContent />} />
+        <Card
+          title={'Projects'}
+          subtitle={'Yogyakarta, Indonesia'}
+          content={<ProjectContent />}
+          sponsor
+        />
+        <Card title={'Tech Stack'} subtitle={'Makkah, Saudi Arabia'} content={<TechContent />} />
+        <Card title={'Contact Me'} subtitle={'Tokyo, Japan'} content={<ContactContent />} />
+        <Card
+          title={'Ahmad Nizar'}
+          subtitle={'Yogyakarta, Indonesia'}
+          content={<ThanksContent />}
+        />
       </div>
     </div>
   )
