@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       height: {
         screenCard: 'calc(100vh - 3rem)',
+        cardTwo: 'calc(100vh - 15rem)',
       },
     },
   },
