@@ -7,6 +7,7 @@ import {
   PaperAirplaneIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  EllipsisVerticalIcon,
 } from '@heroicons/react/24/outline'
 
 interface Props {
@@ -31,11 +32,7 @@ const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
           <strong className='block text-lg capitalize'>{title}</strong>
           <span className='capitalize text-sm'>{subtitle}</span>
         </div>
-        <div className='flex flex-col gap-1'>
-          <div className='h-1 w-1 rounded-full bg-black'></div>
-          <div className='h-1 w-1 rounded-full bg-black'></div>
-          <div className='h-1 w-1 rounded-full bg-black'></div>
-        </div>
+        <EllipsisVerticalIcon className='h-6 dark:text-white' />
       </div>
       <div className='flex-1 bg-gray-100'>{content}</div>
       {sponsor && (
