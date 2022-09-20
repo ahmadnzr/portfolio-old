@@ -32,7 +32,9 @@ const App = () => {
             </p>
             <div className='flex gap-3 text-sm mt-5'>
               <a
-                href='#'
+                href='https://drive.google.com/file/d/1OvVCoj1B0Lr3SnfaiWDAUjswzfF_WYzN/view?usp=sharing'
+                target={'_blank'}
+                rel={'noreferrer'}
                 className='px-2 py-1 bg-green-500/10 text-green-700 dark:text-white rounded-md'
               >
                 Download CV
