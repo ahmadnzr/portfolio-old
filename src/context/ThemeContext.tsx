@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useStorageService } from '../services/StorageService'
 
 export type ThemeMode = 'light' | 'dark'
@@ -19,10 +19,13 @@ const ThemeContextWrapper = ({ children }: Props) => {
   const themeMode = useStorageService.getItem<ThemeMode>('theme') || 'light'
   const [theme, setTheme] = useState<ThemeMode>(themeMode)
 
-  const handleToggleTheme = () => {
+  const handleToggleTheme = useCallback(() => {
     setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
-    useStorageService.setItem<ThemeMode>('theme', theme === 'dark' ? 'light' : 'dark')
-  }
+  }, [])
+
+  useEffect(() => {
+    useStorageService.setItem<ThemeMode>('theme', theme)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme: handleToggleTheme }}>
