@@ -6,12 +6,11 @@ interface Props {
 }
 
 const LeftMenu = ({ showMenu, hideMenu }: Props) => {
+  if (!showMenu) return null
 
   return (
     <div
-      className={`z-20 h-screen w-screen bg-gradient-to-t from-green-100 to-white dark:from-green-900 dark:to-black dark:text-white absolute top-12 left-full flex flex-col items-center justify-center gap-10 ${
-        showMenu && '-translate-x-full'
-      } duration-500`}
+      className={`z-20 h-screenCard w-screen bg-gradient-to-t from-green-100 to-white dark:from-green-900 dark:to-black dark:text-white absolute top-12 flex flex-col items-center justify-center gap-10`}
     >
       <div className='flex flex-col items-center justify-center gap-5 text-3xl font-bold'>
         <a href='#' onClick={hideMenu}>

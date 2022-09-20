@@ -21,11 +21,7 @@ const App = () => {
   )
 
   return (
-    <div
-      className={`${theme} h-screen w-screen text-slate-700 relative overflow-x-hidden ${
-        showMenu && 'overflow-y-hidden'
-      }`}
-    >
+    <div className={`${theme} h-screen w-screen text-slate-700 overflow-x-hidden`}>
       <Navbar toggleMenu={() => setShowMenu(!showMenu)} />
       <LeftMenu showMenu={showMenu} hideMenu={() => setShowMenu(false)} />
       <div className='bg-gradient-to-t from-green-100 to-white  dark:from-green-900 dark:to-black'>
