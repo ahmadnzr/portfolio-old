@@ -16,19 +16,19 @@ const Navbar = ({ toggleMenu }: Props) => {
         onClick={toggleTheme}
       >
         {theme === 'dark' ? (
-          <SunIcon className='h-6 text-white' />
+          <SunIcon className='h-6 text-white animate-spin' />
         ) : (
-          <MoonIcon className='h-6 text-green-800' />
+          <MoonIcon className='h-6 text-green-800 animate-pulse' />
         )}
       </div>
       <div className='hidden md:flex gap-3 text-green-800 dark:text-white font-semibold'>
-        <a href='#' className='font-normal'>
+        <a href='#top' className='font-normal'>
           Home
         </a>
-        <a href='#'>About</a>
-        <a href='#'>Projects</a>
-        <a href='#'>Tech. Stack</a>
-        <a href='#'>Contact</a>
+        <a href='#about'>About</a>
+        <a href='#projects'>Projects</a>
+        <a href='#tech'>Tech. Stack</a>
+        <a href='#contact'>Contact</a>
       </div>
       <div
         className='h-9 w-9 flex items-center justify-center cursor-pointer md:hidden'

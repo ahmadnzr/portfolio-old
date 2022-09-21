@@ -11,13 +11,15 @@ import {
 } from '@heroicons/react/24/outline'
 
 interface Props {
+  id: string
   title: string
   subtitle: string
   content: React.ReactNode
   sponsor?: boolean
+  nextSection?: string
 }
 
-const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
+const Card = ({ id, title, subtitle, content, sponsor = false, nextSection = '' }: Props) => {
   const [like, setLike] = useState<boolean>(true)
 
   const toggleLike = useCallback(() => {
@@ -25,7 +27,10 @@ const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
   }, [])
 
   return (
-    <div className='h-cardSmall md:h-cardMedium md:w-1/2 min-h-min flex flex-col mt-2 md:shadow-md'>
+    <div
+      className='h-cardSmall md:h-cardMedium md:w-1/2 min-h-min flex flex-col mt-2 md:shadow-md scroll-m-12 snap-start'
+      id={id}
+    >
       <div className='flex items-center justify-between bg-white dark:bg-black dark:text-white px-4 py-1'>
         <img className='h-12' src={PhotoCard} alt='' />
         <div className='flex-1 mx-2'>
@@ -44,15 +49,20 @@ const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
       <div className='flex items-center justify-between bg-white dark:bg-black dark:text-white px-4 py-3'>
         <div className='flex gap-2'>
           {like ? (
-            <HeartIcon className='h-6' onClick={toggleLike} />
+            <HeartIcon className='h-6 cursor-pointer' onClick={toggleLike} />
           ) : (
-            <HeartIconFull className='h-6 text-red-400' onClick={toggleLike} />
+            <HeartIconFull
+              className='h-6 cursor-pointer text-red-400 animate-pulse'
+              onClick={toggleLike}
+            />
           )}
-          <ChatBubbleOvalLeftIcon className='h-6' />
-          <PaperAirplaneIcon className='h-6' />
+          <ChatBubbleOvalLeftIcon className='h-6 cursor-pointer' />
+          <PaperAirplaneIcon className='h-6 cursor-pointer' />
         </div>
         <div>
-          <ChevronDownIcon className='h-6' />
+          <a href={`#${nextSection}`} className='cursor-pointer'>
+            <ChevronDownIcon className='h-6' />
+          </a>
         </div>
       </div>
     </div>
