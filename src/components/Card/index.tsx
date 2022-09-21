@@ -25,7 +25,7 @@ const Card = ({ title, subtitle, content, sponsor = false }: Props) => {
   }, [])
 
   return (
-    <div className='h-cardTwo min-h-min flex flex-col mt-2'>
+    <div className='h-cardSmall md:h-cardMedium md:w-1/2 min-h-min flex flex-col mt-2 md:shadow-md'>
       <div className='flex items-center justify-between bg-white dark:bg-black dark:text-white px-4 py-1'>
         <img className='h-12' src={PhotoCard} alt='' />
         <div className='flex-1 mx-2'>
