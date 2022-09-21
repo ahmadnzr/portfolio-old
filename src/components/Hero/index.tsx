@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <div className='h-screenCard relative md:flex flex-row-reverse justify-evenly'>
       <div className='flex-1 md:flex items-center justify-start ml-10 mt-16 antialiased text-xl absolute md:static dark:text-white'>
-        <div>
-          <h2 className='text-2xl md:text-4xl font-bold mb-2'>
+        <div className='flex flex-col md:gap-5'>
+          <h2 className='text-2xl md:text-7xl font-bold mb-2'>
             Hi, I&apos;am <strong className='text-green-800'>Nizar.</strong>
           </h2>
-          <p className='md:text-2xl'>
+          <p className='md:text-4xl'>
             I&apos;am <strong>Web Developer</strong>
             <br />
             from <strong>Indonesia</strong>
