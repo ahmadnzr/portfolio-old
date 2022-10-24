@@ -10,7 +10,7 @@ const Navbar = ({ toggleMenu }: Props) => {
   const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
-    <nav className='dark:bg-black bg-white h-12 flex items-center justify-end md:justify-between md:px-16 gap-1 pr-2 sticky top-0 z-10'>
+    <nav className='dark:bg-black bg-white h-14 flex items-center justify-end md:justify-between md:px-40 gap-1 pr-2 sticky top-0 z-10'>
       <div
         className='h-9 w-9 rounded-full bg-gray-300/30 dark:bg-green-900/50 flex items-center justify-center cursor-pointer'
         onClick={toggleTheme}
