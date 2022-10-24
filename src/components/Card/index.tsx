@@ -28,7 +28,7 @@ const Card = ({ id, title, subtitle, content, sponsor = false, nextSection = '' 
 
   return (
     <div
-      className='h-cardSmall md:h-cardMedium md:w-1/2 min-h-min flex flex-col mt-2 md:shadow-md scroll-m-12 snap-start'
+      className='h-cardSmall md:h-cardMedium md:w-1/2 min-h-min flex flex-col mt-2 md:shadow-md scroll-m-14 snap-start'
       id={id}
     >
       <div className='flex items-center justify-between bg-white dark:bg-black dark:text-white px-4 py-1'>
