@@ -24,18 +24,18 @@ const Hero = () => {
               href='https://drive.google.com/file/d/1OvVCoj1B0Lr3SnfaiWDAUjswzfF_WYzN/view?usp=sharing'
               target={'_blank'}
               rel={'noreferrer'}
-              className='px-2 py-1 bg-green-500/10 text-green-700 dark:text-white rounded-md'
+              className='px-2 py-1 bg-green-500/10 text-green-700 dark:text-white rounded-md hover:bg-green-700 hover:text-white duration-300'
             >
               Download CV
             </a>
             <a
               href='#'
-              className='px-2 py-1 bg-white border border-green-700 text-green-700 rounded-md'
+              className='px-2 py-1 bg-white border border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white hover:border-white duration-300'
             >
               Contact Me
             </a>
           </div>
-          <a href='#about' className='animate-bounce cursor-pointer'>
+          <a href='#about' className='animate-bounce hover:animate-none cursor-pointer'>
             <ArrowDownIcon className='h-5 hidden md:block' />
           </a>
         </div>

@@ -15,7 +15,7 @@ const ThanksContent = () => {
         <div className='flex gap-1'>
           <a
             href='#'
-            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 rounded-full'
+            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 hover:bg-green-200 rounded-full duration-300'
           >
             <img src={FB} alt='' className='h-4' />
           </a>
@@ -23,7 +23,7 @@ const ThanksContent = () => {
             href='https://www.instagram.com/ahmadnzr__/'
             target={'_blank'}
             rel={'noreferrer'}
-            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 rounded-full'
+            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 hover:bg-green-200 rounded-full duration-300'
           >
             <img src={IG} alt='' className='h-4' />
           </a>
@@ -31,7 +31,7 @@ const ThanksContent = () => {
             href='https://github.com/ahmadnzr'
             target={'_blank'}
             rel={'noreferrer'}
-            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 rounded-full'
+            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 hover:bg-green-200 rounded-full duration-300'
           >
             <img src={GB} alt='' className='h-4' />
           </a>
@@ -39,13 +39,13 @@ const ThanksContent = () => {
             href='https://www.linkedin.com/in/ahmadnzr/'
             target={'_blank'}
             rel={'noreferrer'}
-            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 rounded-full'
+            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 hover:bg-green-200 rounded-full duration-300'
           >
             <img src={LN} alt='' className='h-4' />
           </a>
           <a
             href='#'
-            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 rounded-full'
+            className='p-1 h-8 w-8 flex items-center justify-center bg-gray-300/30 hover:bg-green-200 rounded-full duration-300'
           >
             <img src={YT} alt='' className='h-4' />
           </a>
